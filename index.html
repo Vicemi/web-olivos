@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<img src="olive_tree.jpg" alt="Olive Tree">
+		<nav id="navbar">
+			<a href="#" class="menu-toggle" id="menu-toggle">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<img src="olive_tree_closeup.jpg" alt="Close-up of Olive Tree" class="center">
+		<section class="attributes">
+			<div class="attribute">
+				<img src="icon1.png" alt="Icon 1" class="icon">
+				<h2>Sustainability</h2>
+				<p>We are committed to sustainable farming practices.</p>
+			</div>
+			<div class="attribute">
+				<img src="icon2.png" alt="Icon 2" class="icon">
+				<h2>Quality</h2>
+				<p>We pride ourselves on the quality of our olive oil.</p>
+			</div>
+			<div class="attribute">
+				<img src="icon3.png" alt="Icon 3" class="icon">
+				<h2>Tradition</h2>
+				<p>Our family has been farming olive trees for generations.</p>
+			</div>
+		</section>
+	</main>
+	<div class="container">
+	  <div class="image">
+		<img src="olive_tree.jpg" alt="Olive Tree">
+	  </div>
+	  <div class="text">
+		<p>Here is some text that describes the olive tree image. It can be a few sentences or even a paragraph. The text will wrap around the image on desktop view, but on mobile view, the image will be displayed above the text.</p>
+	  </div>
+	</div>
+</body>
+
+<script>
+	document.getElementById('menu-toggle').addEventListener('click', function() {
+		document.getElementById('navbar').classList.toggle('open');
+	});
+</script>
+
+</html>
+

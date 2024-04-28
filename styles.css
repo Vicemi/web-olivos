@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 100%;
+    max-width: 800px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        color: #fff;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    #navbar ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        z-index: 99;
+    }
+
+    #navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #navbar a {
+        color: #fff;
+    }
+
+    #navbar.open ul {
+        display: block;
+    }
+
+    #navbar.open .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #navbar.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #navbar.open .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #navbar ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        padding: 20px;
+    }
+
+    #navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #navbar a {
+        color: #000;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.attributes {
+    display: flex;
+    justify-content: center;
+}
+
+.attribute {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.attribute h2 {
+    margin-top: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 600px) {
+    .attribute {
+        width: 100%;
+    }
+
+    .attributes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.text {
+  flex: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .image, .text {
+    flex: 100%;
+  }
+  .image {
+    order: 1;
+  }
+  .text {
+    order: 2;
+  }
+}
